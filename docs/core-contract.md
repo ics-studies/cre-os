@@ -1,6 +1,6 @@
 # CRE-OS Shared Core
 
-Status: local CRE-OS v1.0.0 structural reference rewired on 2026-11-25 and
+Status: local CRE-OS v1.0.1 structural reference rewired on 2026-11-25 and
 revalidated on 2026-11-26. The canonical evidence gate, portable audit record,
 measurement kernel, uncertainty engine, six metric contracts, CR-CSP, NDSS, SSTP
 and VGT are present and pass the seventeen-check platform gate. All six metrics

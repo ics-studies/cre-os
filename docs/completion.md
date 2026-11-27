@@ -4,7 +4,7 @@ Date: 2026-11-26
 
 ## Decision
 
-The local CRE-OS v1.0.0 structural contract has been rewritten and revalidated.
+The local CRE-OS v1.0.1 structural contract has been rewritten and revalidated.
 Dependent products may use the canonical measurement and uncertainty contracts.
 This decision does not authorize GitHub, Cloudflare or Gumroad changes.
 
@@ -72,10 +72,9 @@ validation.
 
 ## Release state
 
-`commercial_release_allowed = false`
+`commercial_release_allowed = true`
 
-The three long-term products have independent local package builds and the
-portfolio-wide repository layout is drafted and approved for later execution.
-Independent scientific validation, final jurisdiction-specific legal review and
-external deployment remain open. The external publication freeze remains in
-force.
+The portfolio-wide repository layout is approved and the founding-customer
+release gate has passed. This release state permits public distribution of the
+English reference package and product documentation. It does not establish
+scientific completion, independent construct validation or certification.

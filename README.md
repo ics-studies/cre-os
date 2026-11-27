@@ -18,6 +18,8 @@ authority.
 [Portfolio](https://github.com/ics-studies/ics-portfolio) ·
 [ICS website](https://ics-studies.org/en/)
 
+**Product type:** open Python foundation and commercial integration layer.
+
 ## Core components
 
 - an evidence gate that fails closed when required evidence is absent;
@@ -46,7 +48,7 @@ institutional authority.
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install "git+https://github.com/ics-studies/ics-portfolio.git"
+.\.venv\Scripts\python.exe -m pip install "https://github.com/ics-studies/cre-os/releases/download/v1.0.1/ics_cre_os-1.0.1-py3-none-any.whl"
 ics-cre-os status
 ```
 
