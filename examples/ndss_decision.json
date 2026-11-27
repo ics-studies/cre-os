@@ -1,0 +1,107 @@
+{
+  "context": "deep_uncertainty",
+  "escalate_on_evidence_gap": false,
+  "actions": [
+    {
+      "action_id": "staged-reversible",
+      "principle_scores": {
+        "RFP": 0.7,
+        "NRP": 0.7,
+        "REV": 0.95
+      },
+      "attributes": {
+        "rollback_drill_passed": true,
+        "rollback_evidence_ids": [
+          "audit:rollback-drill-2026-11"
+        ]
+      }
+    },
+    {
+      "action_id": "irreversible-fast-path",
+      "principle_scores": {
+        "RFP": 0.95,
+        "NRP": 0.4,
+        "REV": 0.1
+      },
+      "attributes": {
+        "rollback_drill_passed": false,
+        "rollback_evidence_ids": [
+          "audit:rollback-drill-2026-10"
+        ]
+      }
+    },
+    {
+      "action_id": "unverified-shutdown",
+      "principle_scores": {
+        "RFP": 1.0,
+        "NRP": 1.0,
+        "REV": 1.0
+      },
+      "redline_findings": [
+        {
+          "redline_id": "FRL-5",
+          "evidence_ids": [
+            "audit:design"
+          ],
+          "rationale": "No verified shutdown or rollback path was supplied.",
+          "condition_evidence": {
+            "关闭能力": [
+              "audit:shutdown-path-missing"
+            ],
+            "回滚能力": [
+              "audit:rollback-path-missing"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "constraint_id": "CURRENT-ROLLBACK-DRILL",
+      "field": "attributes.rollback_drill_passed",
+      "operator": "equals",
+      "expected": true,
+      "effect": "defer",
+      "rationale": "A current passed rollback drill is required for this context.",
+      "sources": [
+        {
+          "volume": 1,
+          "chapter": "10",
+          "section": "10.5"
+        }
+      ],
+      "evidence_field": "attributes.rollback_evidence_ids",
+      "required_evidence": [
+        "Dated rollback drill record"
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "metric": "CRV",
+      "metric_version": "2.0.0",
+      "dimensions": {
+        "observability": 0.6,
+        "enforceability": 0.4,
+        "reversibility": 0.9
+      },
+      "score": 0.63,
+      "interval": {
+        "lower": 0.51,
+        "upper": 0.74
+      },
+      "uncertainty_kind": "knightian",
+      "sources": [
+        {
+          "volume": 2,
+          "chapter": "24",
+          "section": "24.5"
+        }
+      ],
+      "warnings": [
+        "Metric values are illustrative and not calibrated."
+      ]
+    }
+  ]
+}

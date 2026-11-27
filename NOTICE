@@ -1,0 +1,23 @@
+ESG Commitment Audit Workbench
+Copyright 2026 Xue Zhi Xin (ICS-TEC)
+
+This product includes original software and rule content developed for the
+ICS-TEC ESG commitment audit workbench.
+
+Unless otherwise stated:
+- software and executable rule packs are licensed under Apache License 2.0;
+- future formalization files under the formalizations/ directory are intended
+  to be licensed under Creative Commons Attribution-ShareAlike 4.0
+  International (CC BY-SA 4.0).
+
+No trademark, service-mark, certification-mark, or brand-use right is granted
+under the software license. The names "ICS", "ICS-TEC", and associated branding
+remain subject to separate permission.
+
+The AI Policy Revision Audit Beta is informed by Xue, Z. (2026), "On Recursive
+Freedom: A Theory of the Freedom to Revise", DOI
+https://doi.org/10.5281/zenodo.24217876. This citation identifies intellectual
+provenance and does not change the Apache License 2.0 applied to this software.
+
+No third-party source code is vendored into this v0.4.0.dev2 release. Runtime
+dependencies are declared in pyproject.toml and retain their own licenses.
